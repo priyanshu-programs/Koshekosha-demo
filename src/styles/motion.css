@@ -1,0 +1,78 @@
+/*
+ * Marquee + wave dividers.
+ *
+ * The origin repeats its content four times in the DOM and translates the
+ * track by -100%, so the seam lands exactly on a duplicate. Animation starts
+ * paused and is resumed by an IntersectionObserver.
+ */
+
+@keyframes translateX {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+[data-css-marquee] {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+[data-css-marquee-list] {
+  display: flex;
+  flex-shrink: 0;
+  animation: translateX 30s linear infinite;
+  animation-play-state: paused;
+  will-change: transform;
+}
+
+[data-css-marquee][data-playing="true"] [data-css-marquee-list] {
+  animation-play-state: running;
+}
+
+/* Wave divider */
+.wave-component {
+  --wave-width: 600px;
+  --wave-height: 13px;
+  position: relative;
+  width: 100%;
+  height: var(--wave-height);
+  display: flex;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.wave-component_wave {
+  width: var(--wave-width);
+  height: var(--wave-height);
+  margin-right: -0.125rem;
+  flex-shrink: 0;
+  animation: translateX 5s linear infinite;
+}
+
+.wave-component_wave svg {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 64rem) {
+  .wave-component {
+    --wave-width: 2400px;
+    --wave-height: 53px;
+  }
+
+  .wave-component_wave {
+    animation-duration: 10s;
+  }
+}
+
+/* The divider overlaps the neighbouring section so the fill reads as one shape. */
+.wave-component--top {
+  margin-bottom: -0.0625rem;
+}
+
+.wave-component--bottom {
+  margin-top: -0.0625rem;
+}

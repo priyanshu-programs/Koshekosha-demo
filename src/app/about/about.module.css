@@ -1,0 +1,71 @@
+.hero {
+  text-align: center;
+}
+
+.heading {
+  max-width: 16ch;
+  margin: 0 auto;
+}
+
+.lead {
+  max-width: 44rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lead p {
+  font-size: 1.0625rem;
+  line-height: 160%;
+}
+
+.media {
+  width: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.media img {
+  width: 100%;
+  height: auto;
+}
+
+.labelText {
+  max-width: 44rem;
+}
+
+.values {
+  width: 100%;
+  max-width: 44rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.values li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-primary);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/* Four-pointed sparkle bullet, echoing the hero marquee. */
+.valueMark {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  background: currentcolor;
+  clip-path: polygon(
+    50% 0%,
+    58% 42%,
+    100% 50%,
+    58% 58%,
+    50% 100%,
+    42% 58%,
+    0% 50%,
+    42% 42%
+  );
+}

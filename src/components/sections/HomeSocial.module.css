@@ -1,0 +1,82 @@
+.section {
+  background: var(--color-egg);
+}
+
+.heading {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border: 0.125rem solid var(--color-cranberry);
+  border-radius: 2rem;
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: var(--base-transition);
+  transition-property: background, color;
+}
+
+.tag svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media (hover: hover) {
+  .tag:hover {
+    background: var(--color-cranberry);
+    color: var(--color-egg);
+  }
+}
+
+.gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.item {
+  position: relative;
+  display: block;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease-out;
+}
+
+@media (hover: hover) {
+  .item:hover img {
+    transform: scale(1.05);
+  }
+}
+
+/* Alternating tilt gives the grid its scrapbook feel. */
+.item:nth-child(odd) {
+  transform: rotate(-1.5deg);
+}
+
+.item:nth-child(even) {
+  transform: rotate(1.5deg);
+}
+
+@media (min-width: 48rem) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

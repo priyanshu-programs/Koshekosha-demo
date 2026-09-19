@@ -1,0 +1,17 @@
+.carousel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.slide {
+  flex: 0 0 85%;
+}
+
+/* Desktop shows the static grid instead. */
+@media (min-width: 64rem) {
+  .carousel {
+    display: none;
+  }
+}

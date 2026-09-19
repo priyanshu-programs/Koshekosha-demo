@@ -1,0 +1,38 @@
+.hero {
+  background: var(--color-shiraz);
+  color: var(--color-egg);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.content {
+  max-width: 28rem;
+}
+
+.content h1 {
+  color: var(--color-egg);
+}
+
+.content p {
+  color: var(--color-lemon);
+}
+
+.map img {
+  width: 100%;
+  height: auto;
+}
+
+.retailCopy {
+  max-width: 38rem;
+}
+
+@media (min-width: 64rem) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}

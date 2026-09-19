@@ -1,0 +1,110 @@
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 3rem 0 0;
+  background: var(--color-egg);
+  color: var(--color-cranberry);
+  overflow: hidden;
+}
+
+/* "Main course materials" — the oversized script slogan. */
+.slogan {
+  width: 100%;
+  padding: 0 var(--gutter);
+}
+
+.slogan img {
+  width: 100%;
+  height: auto;
+}
+
+.links {
+  width: 100%;
+  padding: 1.5rem var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.links a,
+.links li {
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.links a {
+  transition: opacity var(--base-transition);
+}
+
+@media (hover: hover) {
+  .links a:hover {
+    opacity: 0.6;
+  }
+}
+
+.social {
+  --icon-size: 2.75rem;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.125rem solid currentcolor;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.social svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Push the trailing items right on wide viewports. */
+.spacer {
+  margin-left: auto;
+}
+
+@media (min-width: 48rem) {
+  .links {
+    gap: 3rem;
+  }
+}
+
+/* Decorative line-art band along the bottom. */
+.illustrations {
+  position: relative;
+  width: 100%;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: end;
+  justify-items: center;
+  gap: 1rem 0.5rem;
+  pointer-events: none;
+}
+
+.illustrations img {
+  width: auto;
+  max-height: 8rem;
+  object-fit: contain;
+}
+
+@media (min-width: 48rem) {
+  .illustrations {
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  .illustrations img {
+    max-height: 11rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .illustrations {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}

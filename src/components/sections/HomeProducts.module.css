@@ -1,0 +1,46 @@
+.section {
+  /*
+   * --accent is set inline from the centred slide. Colouring the type and
+   * controls (rather than the whole panel) keeps the cream backdrop while
+   * still letting each jar drive the section, as the origin does.
+   */
+  --base-color: var(--accent, var(--color-cranberry));
+  background: var(--color-chutney);
+  transition: color 0.6s ease;
+  color: var(--base-color);
+}
+
+.section :global(.icon-btn) {
+  background: var(--base-color);
+  color: var(--color-egg);
+  transition:
+    background 0.6s ease,
+    transform var(--base-transition);
+}
+
+.section :global(.btn) {
+  background: var(--base-color);
+  border-color: var(--base-color);
+  color: var(--color-egg);
+  transition:
+    background 0.6s ease,
+    border-color 0.6s ease,
+    color var(--base-transition);
+}
+
+@media (hover: hover) {
+  .section :global(.btn:hover) {
+    background: transparent;
+    color: var(--base-color);
+  }
+}
+
+.heading {
+  max-width: 48rem;
+  text-align: center;
+}
+
+.heading h2 {
+  color: var(--color-orange);
+  transition: color 0.6s ease;
+}

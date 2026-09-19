@@ -1,0 +1,28 @@
+.section {
+  width: 100%;
+  padding: 2rem 0;
+  background: var(--color-egg);
+  border-top: 0.0625rem solid var(--color-cranberry);
+  border-bottom: 0.0625rem solid var(--color-cranberry);
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding-right: 4rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 4rem;
+}
+
+.logo img {
+  width: auto;
+  max-height: 100%;
+  object-fit: contain;
+}

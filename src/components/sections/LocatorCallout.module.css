@@ -1,0 +1,38 @@
+.section {
+  position: relative;
+  background: var(--color-shiraz);
+  color: var(--color-egg);
+  overflow: hidden;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.content {
+  max-width: 28rem;
+}
+
+.content h2,
+.content p {
+  color: var(--color-egg);
+}
+
+.content p {
+  color: var(--color-lemon);
+}
+
+.map img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 64rem) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}

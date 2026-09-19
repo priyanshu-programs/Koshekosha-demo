@@ -1,0 +1,54 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.slide {
+  flex: 0 0 82%;
+  padding: 0 0.75rem;
+  /* Leaves headroom for the jar that overhangs the card. */
+  padding-top: 3.5rem;
+}
+
+@media (min-width: 64rem) {
+  .slide {
+    flex-basis: 40%;
+  }
+}
+
+.scaler {
+  transition: transform 0.6s ease;
+  transform: scale(0.88);
+}
+
+.slide--selected .scaler {
+  transform: scale(1);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Arrows sit over the card edges on wide viewports. */
+@media (min-width: 64rem) {
+  .controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: min(46rem, 90vw);
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .controls :global(.icon-btn) {
+    pointer-events: auto;
+  }
+}

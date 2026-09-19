@@ -1,0 +1,63 @@
+.section {
+  position: relative;
+  background: var(--color-egg);
+  overflow: hidden;
+}
+
+.header {
+  max-width: 32rem;
+  text-align: center;
+}
+
+.header h2 {
+  margin-bottom: 2rem;
+}
+
+/* Hand illustrations that flank the heading on wide screens. */
+.hand {
+  position: absolute;
+  top: 6rem;
+  width: 14rem;
+  pointer-events: none;
+  display: none;
+}
+
+.handLeft {
+  left: 0;
+}
+
+.handRight {
+  right: 0;
+  top: 10rem;
+}
+
+.grid {
+  display: none;
+}
+
+@media (min-width: 64rem) {
+  .hand {
+    display: block;
+  }
+
+  .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: var(--column-gap);
+  }
+
+  /* Stagger the cards so they sit on a gentle arc. */
+  .grid > li:nth-child(1) {
+    margin-top: 6rem;
+  }
+
+  .grid > li:nth-child(3) {
+    margin-top: 3rem;
+  }
+
+  .cta {
+    display: none;
+  }
+}

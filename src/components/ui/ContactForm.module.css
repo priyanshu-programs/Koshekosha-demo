@@ -1,0 +1,55 @@
+.form {
+  width: 100%;
+  max-width: 36rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.label abbr {
+  margin-left: 0.25rem;
+  text-decoration: none;
+}
+
+.input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: var(--color-egg);
+  border: 0.0625rem solid var(--base-color);
+  border-radius: 0.75rem;
+  color: var(--base-color);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  transition: border-color var(--base-transition);
+}
+
+.input:focus {
+  outline: 0;
+  border-width: 0.125rem;
+}
+
+textarea.input {
+  resize: vertical;
+}
+
+.success {
+  padding: 2rem 0;
+  font-family: var(--font-primary);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-align: center;
+}

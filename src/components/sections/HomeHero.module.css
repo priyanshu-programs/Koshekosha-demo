@@ -1,0 +1,91 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  /* Slide under the fixed header, then pad the content back into view. */
+  margin-top: calc(-1 * var(--header-height));
+  padding-top: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  color: var(--color-egg);
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 3rem var(--gutter);
+  z-index: 1;
+}
+
+.content h1 {
+  max-width: 14ch;
+  color: var(--color-egg);
+  text-shadow: 0 0.125rem 1.5rem rgb(0 0 0 / 25%);
+}
+
+.highlights {
+  position: relative;
+  padding: 0.75rem 0;
+  background: var(--color-lemon);
+  color: var(--color-cranberry);
+  z-index: 1;
+}
+
+.highlightsList {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 3rem;
+}
+
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-shrink: 0;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Four-pointed sparkle separating each phrase. */
+.highlight::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  background: currentcolor;
+  clip-path: polygon(
+    50% 0%,
+    58% 42%,
+    100% 50%,
+    58% 58%,
+    50% 100%,
+    42% 58%,
+    0% 50%,
+    42% 42%
+  );
+}
+
+@media (min-width: 64rem) {
+  .content {
+    padding: 6rem var(--gutter);
+  }
+}

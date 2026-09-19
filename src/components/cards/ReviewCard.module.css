@@ -1,0 +1,92 @@
+.card {
+  position: relative;
+  display: block;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  padding: 1.9375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: var(--border-radius);
+  color: var(--color-egg);
+  aspect-ratio: 320 / 340;
+}
+
+@media (min-width: 64rem) {
+  .content {
+    padding: 2.9375rem;
+    aspect-ratio: 444 / 333;
+  }
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.stars {
+  display: flex;
+  gap: 0.125rem;
+  color: currentcolor;
+}
+
+.star {
+  width: 1rem;
+  height: 1rem;
+  background: currentcolor;
+  clip-path: polygon(
+    50% 0%,
+    58% 42%,
+    100% 50%,
+    58% 58%,
+    50% 100%,
+    42% 58%,
+    0% 50%,
+    42% 42%
+  );
+}
+
+.name {
+  font-family: var(--font-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.quote {
+  flex: 1;
+  font-family: var(--font-primary);
+  font-size: 1.125rem;
+  line-height: 140%;
+  font-weight: 700;
+}
+
+.cta {
+  margin-top: auto;
+}
+
+/* The jar breaks out over the top-right corner of the card. */
+.media {
+  position: absolute;
+  top: -3rem;
+  right: 1.5rem;
+  width: 6.5rem;
+  transform: rotate(8deg);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.media img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 64rem) {
+  .media {
+    width: 9rem;
+    top: -4rem;
+  }
+}

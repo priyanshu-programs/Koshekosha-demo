@@ -1,0 +1,166 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  padding: 0.0625rem var(--gutter) 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.0625rem solid transparent;
+  color: var(--primary-color);
+  transition: var(--base-transition);
+  transition-duration: 0.3s;
+  transition-property: background, transform, color, border-color;
+  will-change: background, transform;
+  /* The bar itself must not swallow clicks over the hero; children opt back in. */
+  pointer-events: none;
+  z-index: var(--z-index-header);
+}
+
+.header a,
+.header button {
+  pointer-events: auto;
+}
+
+/* Over the dark hero photograph, before any scrolling has happened. */
+.header--transparent {
+  color: var(--color-egg);
+}
+
+.header--scrolled {
+  background: var(--color-egg);
+  border-bottom-color: currentcolor;
+  color: var(--primary-color);
+  pointer-events: auto;
+}
+
+.header--hidden {
+  transform: translateY(-100%);
+}
+
+/* The menu must stay reachable while it is open. */
+:global(.state--mobile-menu-open) .header {
+  pointer-events: auto;
+}
+
+:global(.state--mobile-menu-open) .header--hidden {
+  transform: none;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3.5rem;
+  height: 3.5rem;
+  z-index: 1;
+}
+
+.logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.toggle {
+  --icon-size: 3rem;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin-left: auto;
+  position: relative;
+  color: inherit;
+  z-index: 1;
+}
+
+.toggle svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 48rem) {
+  .toggle {
+    display: none;
+  }
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: calc(var(--header-height) + 6rem) var(--gutter) 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--color-egg);
+  color: var(--primary-color);
+  transform: translateY(-110%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.nav--open {
+  transform: translateY(0);
+}
+
+.nav :global(.wave-component) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(-1 * var(--wave-height));
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.nav--open :global(.wave-component) {
+  opacity: 1;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menu a {
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: opacity var(--base-transition);
+}
+
+@media (hover: hover) {
+  .menu a:hover {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: 48rem) {
+  .nav {
+    position: static;
+    width: 100%;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    background: none;
+    color: inherit;
+    transform: none;
+  }
+
+  .nav :global(.wave-component) {
+    display: none;
+  }
+
+  .menu {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .menu a {
+    font-size: 1rem;
+  }
+}
