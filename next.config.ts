@@ -1,10 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   trailingSlash: true,
-  // Pin the workspace root; an unrelated lockfile sits above this directory.
-  turbopack: { root: __dirname },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

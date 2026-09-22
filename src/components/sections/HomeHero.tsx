@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { heroHighlights, site } from "@/data/site";
-import { up } from "@/lib/assets";
 import { Marquee } from "@/components/ui/Marquee";
 import styles from "./HomeHero.module.css";
 
@@ -9,8 +8,8 @@ export function HomeHero() {
     <header className={styles.hero}>
       <div className={styles.bg}>
         <Image
-          src={up("2025/12/Home-Hero-min-2-2560x1600.jpg")}
-          alt=""
+          src="/images/hero.webp"
+          alt="Koshe Kosha authentic Bengali cuisine and ready-to-cook gravies"
           fill
           priority
           sizes="100vw"

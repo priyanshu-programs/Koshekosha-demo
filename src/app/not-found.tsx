@@ -5,13 +5,10 @@ export default function NotFound() {
     <section className="block light">
       <div className="block-inner">
         <div className="text-component text-center">
-          <h1>This page has gone missing</h1>
-          <p>Let us point you back towards the good stuff.</p>
+          <h1>Under Development</h1>
+          <p>We are currently developing this page. Stay tuned for authentic Bengali delights!</p>
           <div className="text-component_buttons">
-            <Button href="/">Back to home</Button>
-            <Button href="/products" variant="outline">
-              View products
-            </Button>
+            <Button href="/">Back to Home</Button>
           </div>
         </div>
       </div>

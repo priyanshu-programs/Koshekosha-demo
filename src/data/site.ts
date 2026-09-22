@@ -1,39 +1,45 @@
 import type { NavItem, Stockist } from "@/types";
 
 export const site = {
-  name: "The Mainstays",
-  tagline: "Your pantry's new main character",
+  name: "Koshe Kosha",
+  tagline: "Come Experience Bengal with us",
   description:
-    "Discover the must-have Mainstays pantry staples and entertaining essentials to elevate your cooking and hosting.",
-  url: "https://yourmainstays.com",
-  instagram: "https://www.instagram.com/yourmainstays",
-  instagramHandle: "yourmainstays",
+    "Koshe Kosha is more than just a culinary venture—it’s a celebration of Bangaliana, intricately woven into every dish we serve. From our humble beginnings, our mission has been clear: to elevate and share the authentic flavors of Bengali cuisine with the world.",
+  url: "https://koshekosha.com",
+  instagram: "https://www.instagram.com/koshekosha",
+  instagramHandle: "koshekosha",
+  phone: "9830 94 94 94",
+  address: "2nd Floor, Block-E, 57 (1327), near Bank of India & Prince Marble, Survey Park, Santoshpur, Kolkata, West Bengal 700075",
 };
 
 /** Split either side of the centred logo in the header. */
 export const navLeft: NavItem[] = [
-  { label: "About", href: "/about" },
-  { label: "Products", href: "/products" },
+  { label: "Home", href: "/" },
+  { label: "Our Story", href: "/our-story" },
+  { label: "Locations", href: "/locations" },
 ];
 
 export const navRight: NavItem[] = [
-  { label: "Recipes", href: "/recipes" },
-  { label: "Find us", href: "/find-us" },
+  { label: "Menu", href: "/menu" },
+  { label: "Contact", href: "/contact" },
+  { label: "ORDER NOW!", href: "/order" },
 ];
 
 export const footerLinks: NavItem[] = [
-  { label: "Wholesale", href: "/wholesale-inquiry" },
-  { label: "Contact", href: "/contact-us" },
+  { label: "Our Story", href: "/our-story" },
+  { label: "Locations", href: "/locations" },
+  { label: "Menu", href: "/menu" },
+  { label: "Contact", href: "/contact" },
 ];
 
 /** Scrolling marquee copy in the hero. */
 export const heroHighlights: string[] = [
-  "Crafted with care",
-  "Jam-packed with flavour",
-  "Pantry heroes",
-  "Thoughtfully-sourced ingredients",
-  "Bold, modern classics",
-  "Flavours that pop",
+  "Authentic Bengali Cuisine",
+  "Celebration of Bangaliana",
+  "Serving the best of Bengal",
+  "Hatibagan Table of Promise",
+  "Kosha Mangsho & Mahabhoj",
+  "Timeless Flavours of Bengal",
 ];
 
 export const stockists: Stockist[] = [

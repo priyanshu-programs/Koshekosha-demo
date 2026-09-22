@@ -1,64 +1,55 @@
 import type { Review } from "@/types";
 
-/** Order and per-card colors match the origin carousel. */
+/** Reviews featuring Koshe Kosha flavours and products. */
 export const reviews: Review[] = [
   {
-    name: "Kyla S.",
+    name: "Priyanka D.",
     quote:
-      "The spicy beans and extra hot horseradish are the perfect combo for elevating your caesars",
-    color: "#4e65c3",
-    productSlug: "extra-hot-horseradish",
-    productName: "Extra Hot Horseradish",
-    productImage: "2025/12/Extra_Hot_Horseradish_v2.png",
-    mediaWidth: "narrow",
-  },
-  {
-    name: "Jim D.",
-    quote:
-      "My turkey sandwiches aren't complete without the Mainstays cranberry sauces!",
+      "The Kosha Mangsho paste is sheer perfection! Rich, dark, aromatic gravy slow-cooked to Bengali perfection.",
     color: "#cb2821",
-    productSlug: "shiraz-cranberry-sauce",
-    productName: "Shiraz Cranberry Sauce",
-    productImage: "2025/11/Shiraz_Cranberry_Sauce.png",
+    productSlug: "kosha-mangsho",
+    productName: "Kosha Mangsho",
+    productImage: "/images/dishes/kosha-mangsho.webp",
     mediaWidth: "wide",
   },
   {
-    name: "Mike P.",
-    quote: "Caesars, salads or subs — this bean is giving main character energy.",
+    name: "Sourav M.",
+    quote:
+      "The Malaikari paste brings authentic coastal Bengali indulgence to prawns. Creamy, subtle, and unforgettable.",
+    color: "#d4621a",
+    productSlug: "malaikari",
+    productName: "Malaikari",
+    productImage: "/images/dishes/malaikari.webp",
+    mediaWidth: "wide",
+  },
+  {
+    name: "Ananya B.",
+    quote:
+      "The Shorshie mustard punch is genuinely authentic! Makes Maachher Jhal taste just like my Thakuma's kitchen.",
+    color: "#c9a227",
+    productSlug: "shorshie",
+    productName: "Shorshie",
+    productImage: "/images/dishes/shorshie.webp",
+    mediaWidth: "narrow",
+  },
+  {
+    name: "Debashis C.",
+    quote:
+      "The Gondhoraj paste carries that distinctive aromatic fragrance of Bengal's favorite lime. Fresh and uplifting!",
     color: "#3b8a32",
-    productSlug: "garlic-dill-pickled-beans",
-    productName: "Garlic and Dill Pickled Beans",
-    productImage: "2025/12/Garlic_and_Dill_Pickled_Beans_v2.png",
+    productSlug: "gondhoraj",
+    productName: "Gondhoraj",
+    productImage: "/images/dishes/gondhoraj.webp",
     mediaWidth: "narrow",
   },
   {
-    name: "Lainie S.",
+    name: "Mousumi S.",
     quote:
-      "I use the Mainstays peach and apricot chutney to make a quick, low-stress meal that tastes gourmet.",
-    color: "#ee7700",
-    productSlug: "peach-apricot-chutney",
-    productName: "Peach and Apricot Chutney",
-    productImage: "2025/11/Peach_and_Apricot_Chutney.png",
-    mediaWidth: "wide",
-  },
-  {
-    name: "Sarah R.",
-    quote:
-      "The sweet heat chutney is exactly that - the perfect combo of sweet and spicy.",
-    color: "#3f3226",
-    productSlug: "sweet-heat-peach-apricot-chutney",
-    productName: "Sweet Heat Peach and Apricot Chutney",
-    productImage: "2025/11/Sweet_Heat_Peach_and_Apricot_Chutney.png",
-    mediaWidth: "wide",
-  },
-  {
-    name: "Drew M.",
-    quote:
-      "The cabernet sauvignon cranberry sauce is rich, tangy and dangerously goblet-worthy!!",
-    color: "#cb2821",
-    productSlug: "cabernet-sauvignon-cranberry-sauce",
-    productName: "Cabernet Sauvignon Cranberry Sauce",
-    productImage: "2025/11/Cabernet_Sauvignon_Cranberry_Sauce.png",
+      "Pure Bangaliana in every bite. The Dalna curry paste makes weeknight Bengali meals effortless and hearty.",
+    color: "#2e8bc0",
+    productSlug: "dalna",
+    productName: "Dalna",
+    productImage: "/images/dishes/dalna.webp",
     mediaWidth: "wide",
   },
 ];

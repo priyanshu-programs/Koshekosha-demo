@@ -10,7 +10,7 @@ interface HomeProductsProps {
 }
 
 export function HomeProducts({ products }: HomeProductsProps) {
-  // Drives the section tint; the carousel reports which jar is centred.
+  // Drives the section tint; the carousel reports which item is centred.
   const [accent, setAccent] = useState(products[0]?.color ?? "#cb2821");
 
   const handleSelect = useCallback((product: Product) => {
@@ -24,7 +24,10 @@ export function HomeProducts({ products }: HomeProductsProps) {
     >
       <div className="block-inner">
         <div className={styles.heading}>
-          <h2>Not so average pantry staples and entertaining essentials</h2>
+          <h2>Serving the best of Bengal</h2>
+          <p style={{ marginTop: "1rem", fontSize: "1.0625rem", opacity: 0.85 }}>
+            An elevated expression of Bengal&rsquo;s culinary heritage, where tradition meets thoughtful craftsmanship.
+          </p>
         </div>
         <ProductCarousel products={products} onSelect={handleSelect} />
       </div>

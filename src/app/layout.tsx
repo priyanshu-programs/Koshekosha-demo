@@ -29,14 +29,14 @@ const serifBrand = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Pantry Staples and Entertaining Essentials - The Mainstays",
-    template: "%s - The Mainstays",
+    default: "Koshe Kosha — Authentic Bengali Cuisine | Kolkata",
+    template: "%s — Koshe Kosha",
   },
   description: site.description,
   openGraph: {
     type: "website",
     siteName: site.name,
-    title: "Pantry Staples and Entertaining Essentials - The Mainstays",
+    title: "Koshe Kosha — Authentic Bengali Cuisine | Kolkata",
     description: site.description,
   },
   twitter: { card: "summary_large_image" },

@@ -9,7 +9,7 @@ export function HomeSocial() {
     <section className={`block ${styles.section}`}>
       <div className="block-inner">
         <div className={styles.heading}>
-          <h2>Mainstays in the wild</h2>
+          <h2>Our Social Feed</h2>
           <a
             href={site.instagram}
             className={styles.tag}
@@ -17,7 +17,7 @@ export function HomeSocial() {
             rel="noopener noreferrer"
           >
             <InstagramIcon />
-            <span>{site.instagramHandle}</span>
+            <span>@{site.instagramHandle}</span>
           </a>
         </div>
 
@@ -32,7 +32,7 @@ export function HomeSocial() {
             >
               <Image
                 src={up(image)}
-                alt="Mainstays products styled in a home kitchen"
+                alt="Koshe Kosha Bengali culinary experience"
                 width={560}
                 height={676}
                 sizes="(min-width: 48rem) 33vw, 100vw"

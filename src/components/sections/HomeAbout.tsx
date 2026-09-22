@@ -9,13 +9,13 @@ export function HomeAbout() {
     <section className={`block dark ${styles.section}`}>
       <div className={`block-inner ${styles.inner}`}>
         <Reveal className={styles.heading}>
-          <h2>Everyone&rsquo;s welcome at our table</h2>
+          <h2>Come Experience Bengal with us</h2>
         </Reveal>
 
         <Reveal className={`${styles.media} ${styles.mediaPrimary}`}>
           <Image
             src={up("2025/12/Home-About-1-min.jpg")}
-            alt="A jar of Orange Brandy Cranberry Sauce on a laid table"
+            alt="Authentic Bengali cuisine by Koshe Kosha"
             width={560}
             height={702}
             sizes="(min-width: 64rem) 50vw, 100vw"
@@ -25,7 +25,7 @@ export function HomeAbout() {
         <Reveal className={`${styles.media} ${styles.mediaSecondary}`}>
           <Image
             src={up("2025/12/home-about-left_v2-640x800.jpg")}
-            alt="Plates of lamb and salad served with Mainstays sauces"
+            alt="Traditional Bengali feast spread"
             width={640}
             height={800}
             sizes="(min-width: 64rem) 33vw, 100vw"
@@ -34,14 +34,15 @@ export function HomeAbout() {
 
         <Reveal className={styles.content}>
           <p>
-            We&rsquo;re here for the moments that bring people together: big
-            feasts, couch snacks, and everything in between. The Mainstays makes
-            mealtime easy, delicious, and full of flavour you&rsquo;ll actually
-            get excited about.
+            Koshe Kosha is more than just a culinary venture&mdash;it&rsquo;s a
+            celebration of Bangaliana, intricately woven into every dish we
+            serve. From our humble beginnings, our mission has been clear: to
+            elevate and share the authentic flavors of Bengali cuisine with the
+            world.
           </p>
           <div className="text-component_buttons">
-            <Button href="/about" variant="outline">
-              Our Story
+            <Button href="/our-story" variant="outline">
+              Read Our Story
             </Button>
           </div>
         </Reveal>

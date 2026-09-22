@@ -2,7 +2,8 @@ export type ProductCategorySlug =
   | "condiments"
   | "sauces"
   | "chutneys"
-  | "pickles";
+  | "pickles"
+  | "gravies";
 
 export interface ProductCategory {
   slug: ProductCategorySlug;

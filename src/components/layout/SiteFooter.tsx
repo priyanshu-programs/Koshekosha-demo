@@ -11,10 +11,25 @@ export function SiteFooter() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={theme("images/footer-slogan-desktop.svg")}
-          alt="Main course materials"
+          alt="Authentic Bengali cuisine"
           width={1600}
           height={209}
         />
+      </div>
+
+      <div style={{ padding: "0 var(--gutter)", textAlign: "center", margin: "1rem 0" }}>
+        <p style={{ fontFamily: "var(--font-secondary)", fontSize: "1.5rem", fontWeight: "bold" }}>
+          Authentic Bengali Cuisine
+        </p>
+        <p style={{ marginTop: "0.5rem", fontSize: "1rem" }}>
+          Call For Enquiries:{" "}
+          <a href={`tel:${site.phone.replace(/\s/g, "")}`} style={{ fontWeight: "bold", textDecoration: "underline" }}>
+            {site.phone}
+          </a>
+        </p>
+        <p style={{ marginTop: "0.25rem", fontSize: "0.875rem", opacity: 0.85 }}>
+          {site.address}
+        </p>
       </div>
 
       <ul className={styles.links}>
@@ -34,16 +49,7 @@ export function SiteFooter() {
             <Link href={link.href}>{link.label}</Link>
           </li>
         ))}
-        <li className={styles.spacer}>&copy;themainstays</li>
-        <li>
-          <a
-            href="https://onboxcreative.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Site by ONBOX
-          </a>
-        </li>
+        <li className={styles.spacer}>&copy; Koshe Kosha</li>
       </ul>
 
       <div className={styles.illustrations} aria-hidden="true">
